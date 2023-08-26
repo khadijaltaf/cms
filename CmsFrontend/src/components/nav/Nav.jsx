@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './Nav.css'; 
+import signup from '../signup-KT/Signup.jsx'
+import Home from '../HomePage/Home';
 
 const li = [
   {
@@ -8,21 +10,19 @@ const li = [
   },
   {
     link: '/',
-    text: 'Link 2'
+    text: 'Posts'
 
   },
   {
     link: '/',
-    text: 'Link 3'
+    text: 'Top posts'
   },
   {
     link: '/',
-    text: 'Link 4'
-  },
-  {
-    link: '/',
-    text: 'Link 5'
+    text: 'Settings'
   }
+  
+  
 ];
 
 const SideDraw = ({ show, click }) => {
@@ -78,16 +78,16 @@ const Nav = () => {
             <SideDrawBtn click={drawToggleHandler} />
           </div>
           <div className="logo">
-            <a href="/">The Logo</a>
+            <a href="/">POSTPULSE</a>
           </div>
           <div className="spacer"></div>
           <div>
             <ul>
               <li>
-                <a href="/">Products</a>
+                <a href={signup}>Sign Up</a>
               </li>
               <li>
-                <a href="/">Users</a>
+                <a href="/">Login</a>
               </li>
             </ul>
           </div>
@@ -96,7 +96,7 @@ const Nav = () => {
       <SideDraw click={backDropClickHandler} show={sideDrawOpen} />
       {backDrop}
       <main>
-        <h2>This is the main area</h2>
+        <Home/>
       </main>
     </div>
   );

@@ -1,0 +1,21 @@
+/**THEME COLORS:
+* DECEDE => 84, 8, -6
+* B88DB9 
+* 7673AB
+* 314CB6
+* 0A81D1
+
+background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(132,120,168,1) 63%, rgba(82,132,209,1) 100%);
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+</style>
+
+**/
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
