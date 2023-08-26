@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import './Nav.css'; 
-import signup from '../signup-KT/Signup.jsx'
-import Home from '../HomePage/Home';
+import './Nav.css';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+import { Link } from 'react-router-dom';
+
 
 const li = [
   {
-    link: '/signup.jsx',
+    link: '/',
     text: 'DashBoard'
   },
   {
@@ -21,8 +23,8 @@ const li = [
     link: '/',
     text: 'Settings'
   }
-  
-  
+
+
 ];
 
 const SideDraw = ({ show, click }) => {
@@ -70,6 +72,8 @@ const Nav = () => {
     backDrop = <BackDrop />;
   }
 
+
+
   return (
     <div style={{ height: '100%' }}>
       <header className="toolbar">
@@ -81,13 +85,17 @@ const Nav = () => {
             <a href="/">POSTPULSE</a>
           </div>
           <div className="spacer"></div>
+
           <div>
             <ul>
               <li>
-                <a href={signup}>Sign Up</a>
-              </li>
-              <li>
-                <a href="/">Login</a>
+                <Stack direction="row" spacing={2}>
+                  <Link to="/signup">
+                    <Button variant="contained">
+                      Sign Up
+                    </Button>
+                  </Link>
+                </Stack>
               </li>
             </ul>
           </div>
@@ -96,7 +104,7 @@ const Nav = () => {
       <SideDraw click={backDropClickHandler} show={sideDrawOpen} />
       {backDrop}
       <main>
-        <Home/>
+        {/* <Home /> */}
       </main>
     </div>
   );
