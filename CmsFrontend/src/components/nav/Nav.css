@@ -118,9 +118,13 @@
    margin-left:1rem;
  }
   */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 
+*{
+  font-style: 'Poppins', sans-serif;
+}
   .navbar {
-    background-color: #468bb3;
+    background-color: #309ddb;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;

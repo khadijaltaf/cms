@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React from 'react'
 // import { Link, Outlet } from 'react-router-dom';
 
@@ -70,6 +71,4 @@ function Login() {
 }
 
 export default Login;
-
-
 
