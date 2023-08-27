@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import './Bmanagment.css'
-import { getBlogs } from '../../services/blogs.service.js';
+// import { getBlogs } from '../../services/blogs.service.js';
 
 const Bmanagment = () => {
-let [blogs, setblogs] =  useState([]);
-useEffect(()=>{
-  getBlogs().then((blogs)=>{
-    setblogs(blogs);
-  }).catch(err=>{
+// let [blogs, setblogs] =  useState([]);
+// useEffect(()=>{
+//   getBlogs().then((blogs)=>{
+//     setblogs(blogs);
+//   }).catch(err=>{
 
-  })
-})
+//   })
+// })
 
   return (
     <div>
@@ -61,7 +61,7 @@ useEffect(()=>{
           </tr>
         </thead>
         <tbody>
-          {blogs.map ((blog)=>{
+          {/* {blogs.map ((blog)=>{
             return <tr>
             <th scope="row"><button className=' btn btn-success'>open</button><button className=' btn btn-danger'>Delete</button><button className=' btn btn-primary'>Edit</button></th>
             <th>{blog._id}</th>
@@ -73,8 +73,19 @@ useEffect(()=>{
 
 
           </tr>
-          })}
+          })} */}
           
+          <tr>
+          <th scope="row"><button className=' btn btn-success'>open</button><button className=' btn btn-danger'>Delete</button><button className=' btn btn-primary'>Edit</button></th>
+            <th scope="col">01</th>
+            <th scope="col">Nature</th>
+            <th scope="col"> Khadija </th>
+
+            <th scope="col">9/10/2020</th>
+            <th scope="col">10/5/2023</th>
+
+
+          </tr>
          
         </tbody>
       </table>
