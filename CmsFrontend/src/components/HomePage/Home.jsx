@@ -1,6 +1,6 @@
 import React from 'react'
 import './Home.css'
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import ErrorBoundary from '../../ErrorBoundary.jsx'
 import Posts from './Posts.jsx'
 
@@ -22,6 +22,10 @@ const Home = () => {
                   Join for Free
                 </button>
               </Link>
+            </div>
+
+            <div>
+              <p>start reading you blogs from here... </p>
             </div>
 
           </div>
