@@ -24,14 +24,14 @@ const routes = createBrowserRouter([
       {
         path: 'signup',
         element: <Signup />,
-        children: [
-          {
-            path: 'login',
-            element: <Login />,
-          },
-        ],
-      }
       
+      }, 
+      {
+        path: 'login',
+        element: <Login />,
+      }
+
+
     ],
   },
 ]);
