@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Bmanagment.css'
+import { getBlogs } from '../../services/blogs.service.js';
 
 const Bmanagment = () => {
+let [blogs, setblogs] =  useState([]);
+useEffect(()=>{
+  getBlogs().then((blogs)=>{
+    setblogs(blogs);
+  }).catch(err=>{
+
+  })
+})
+
   return (
     <div>
       <div>
@@ -51,35 +61,21 @@ const Bmanagment = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
+          {blogs.map ((blog)=>{
+            return <tr>
             <th scope="row"><button className=' btn btn-success'>open</button><button className=' btn btn-danger'>Delete</button><button className=' btn btn-primary'>Edit</button></th>
-            <th>01</th>
-            <td>Mark</td>
-            <td>Mark</td>
+            <th>{blog._id}</th>
+            <td>{blog.title}</td>
+            <td>{blog.body}</td>
 
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td>{blog.createdAt}</td>
+            <td>{blog.updatedAt}</td>
 
 
           </tr>
-          <tr>
-            <th scope="row"><button className=' btn btn-success'>open</button><button className=' btn btn-danger'>Delete</button><button className=' btn btn-primary'>Edit</button></th>
-            <th>02</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>Mark</td>
-
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row"><button className=' btn btn-success'>open</button><button className=' btn btn-danger'>Delete</button><button className=' btn btn-primary'>Edit</button></th>
-            <th>03</th>
-            <td>Larry </td>
-            <td>Mark</td>
-            <td>@twitter</td>
-            <td>Mark</td>
-
-          </tr>
+          })}
+          
+         
         </tbody>
       </table>
     </div>

@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
-import './Login.css'
-=======
-<<<<<<< HEAD
-// import React from 'react'
-// import { Link, Outlet } from 'react-router-dom';
 
-// const Login = () => {
+import './Login.css'
+import React from 'react'
+import { Link, Outlet } from 'react-router-dom';
+
+const Login = () => {
 //   return (
 //     <div>Login</div>
 //   )
@@ -17,33 +13,10 @@ import './Login.css'
 
 /////////////
 
-import React, { useState } from 'react';
-import './Login.css';
 
-function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [showPassword, setShowPassword] = useState(false);
-
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-  };
-
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
-
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
-  };
-
-  const handleLogin = () => {
-    alert(`Email: ${email}\nPassword: ${password}`);
-  };
->>>>>>> d1625ea7acf4655cf008e3002d82d0fa0fac22f0
 
   return (
-<<<<<<< HEAD
+
     <div><main class="main">
     <div class="container">
       <section class="wrapper">
@@ -70,38 +43,7 @@ function Login() {
       </section>
     </div>
   </main></div>
-=======
-    <div className="login-container">
-      <h2>Login</h2>
-      <div className="input-container">
-        <input
-          type="email"
-          placeholder="Username/Email"
-          value={email}
-          onChange={handleEmailChange}
-          required
-        />
-      </div>
-      <div className="input-container">
-        <input
-          type={showPassword ? 'text' : 'password'}
-          placeholder="Password"
-          value={password}
-          onChange={handlePasswordChange}
-          required
-        />
-        <span className="eye-icon" onClick={togglePasswordVisibility}>
-          {showPassword ? '👁️' : '👁️‍🗨️'}
-        </span>
-      </div>
-      <button className="login-button" onClick={handleLogin}>
-        Login
-      </button>
-      <p className="signup-link">
-        Don't have an account? <a href="#">Sign up</a>
-      </p>
-    </div>
->>>>>>> d1625ea7acf4655cf008e3002d82d0fa0fac22f0
+
   );
 }
 
